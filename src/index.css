@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animate pulse for skeletons */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse { animation: pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Drawer transition */
+.drawer-enter {
+  transform: translateX(100%);
+}
+.drawer-open {
+  transform: translateX(0);
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar suppression */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C9CDD4; border-radius: 3px; }
+
+/* Focus rings — keyboard only, no ring on mouse click */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid #111318;
+  outline-offset: 2px;
+  border-radius: 2px;
+}

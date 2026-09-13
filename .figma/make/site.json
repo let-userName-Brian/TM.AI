@@ -1,0 +1,10 @@
+{
+  "description": "Streamline software delivery workflows for developers and analysts by managing AI-generated outputs with traceable, human-approved decisions before integration.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
